@@ -9,5 +9,6 @@ pub fn mount() {
 }
 
 pub fn status() {
-    println!("Status feature not implemented yet");
+    println!("Configured rclone remotes:");
+    let _ = rclone::run_rclone(&["listremotes"]);
 }
